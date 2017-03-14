@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { HttpClient } from '../../utils/HttpClient'
 import {
   FormGroup,
   FormControl,
@@ -13,7 +13,10 @@ import {
 
 export class RegisterPage {
 form;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public httpDelegate: HttpClient)
+ {
 
     this.form = new FormGroup({
       name: new FormControl("", Validators.required),
@@ -24,10 +27,23 @@ form;
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
+  // 去注册
 click(){
+var data = {
 
-    alert('去注册' + this.form.value.name);
-    
-;
+  name : this.form.value.name
 }
+
+let url = 'http://10.10.10.237:8081/register';
+  alert(this.form.value.name);
+
+this.httpDelegate.getDataFromUrl<any>(url, data, {}).then(any => {  
+    // console.log(model.id) 
+    alert('success'); 
+}).catch(err => {  
+    // alert(err)  
+})  
+
+  
+    }
 }
