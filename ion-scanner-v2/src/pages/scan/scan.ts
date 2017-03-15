@@ -19,11 +19,13 @@ date: string = new Date().toISOString();
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,
     public navCtrl : NavController
-  ) { }
+  ) { 
+  
+  }
 
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
-      cssClass: 'page-scan',
+     
       buttons: [
         {
           text: '签到',
