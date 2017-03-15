@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
-
+import {BarcodeScanner} from 'ionic-native';
+import { NavController } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
-
+import {ConfirmPage} from '../confirm/confirm';
 
 @Component({
   templateUrl: 'scan.html',
@@ -11,7 +11,8 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 export class ScanPage {
   constructor(
     public platform: Platform,
-    public actionsheetCtrl: ActionSheetController
+    public actionsheetCtrl: ActionSheetController,
+    public navCtrl : NavController
   ) { }
 
   openMenu() {
@@ -43,6 +44,27 @@ export class ScanPage {
       ]
     });
     actionSheet.present();
+  }
+     // 去扫码
+  scan(){
+    BarcodeScanner.scan().then((result) => {
+      if (!result.cancelled) {
+
+        this.navCtrl.push(ConfirmPage,{item:result.text});
+
+        // alert("text:then 1" + result.text);
+        // alert("format: " + result.format);
+      }
+
+    }).then(function (event) {
+
+      //  alert("text:" + 'xxxxxx');
+
+       event;
+    })
+    .catch((err) => {
+      alert('err: ' + err);
+    })
   }
 }
 

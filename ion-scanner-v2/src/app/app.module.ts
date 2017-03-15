@@ -8,6 +8,7 @@ import { ScanPage } from '../pages/scan/scan';
 import { RegisterPage } from '../pages/register/register';
 import { HttpClient } from '../utils/HttpClient';
 import { LoginPage } from '../pages/login/login';
+import {ConfirmPage} from '../confirm/confirm';
 @NgModule({
   declarations: [
     MyApp,

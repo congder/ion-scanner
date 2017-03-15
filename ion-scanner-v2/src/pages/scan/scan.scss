@@ -39,8 +39,10 @@
 		background:transparent;
 	}
 	.camera{
-		display:block;
-		margin:0 auto;
+		// display:block;
+		// margin:0 auto; assets/img/camera.png
+	   background:url(../assets/img/camera.png) no-repeat;
+	   background-size:contain;
 	}
 	.record{
 		float:right;
