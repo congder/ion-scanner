@@ -39,10 +39,12 @@
 		background:transparent;
 	}
 	.camera{
-		// display:block;
-		// margin:0 auto; assets/img/camera.png
+	   display:block;
+	   margin:0 auto; 
 	   background:url(../assets/img/camera.png) no-repeat;
 	   background-size:contain;
+	   width:225px ;
+	   height: 225px;
 	}
 	.record{
 		float:right;
