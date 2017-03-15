@@ -19,7 +19,7 @@ export class ScanPage {
 
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
-      cssClass: 'page-scan',
+     
       buttons: [
         {
           text: '签到',
