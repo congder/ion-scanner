@@ -9,6 +9,11 @@ import { HomePage } from '../home/home';
   selector:'page-scan'
 })
 export class ScanPage {
+
+date: string = new Date().toISOString();
+
+  
+
   constructor(
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,
@@ -65,8 +70,8 @@ export class ScanPage {
   }
 
   record(){
-  this.navCtrl.push(ConfirmPage);
-
+  // this.navCtrl.push(ConfirmPage);
+alert(this.date)
   }
 // .then(function (event) {
 
