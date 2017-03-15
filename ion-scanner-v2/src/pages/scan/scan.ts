@@ -1,51 +1,48 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {RegisterPage} from '../register/register';
-import {
-  // FormGroup,
-  FormControl,
-  Validators
-} from '@angular/forms';
+
+
+import { Platform, ActionSheetController } from 'ionic-angular';
+
 
 @Component({
-  selector: 'page-scan',
-  templateUrl: 'scan.html'
+  templateUrl: 'scan.html',
+  selector:'page-scan'
 })
 export class ScanPage {
-// 桌号
-text : string ;
-//姓名
-form;
+  constructor(
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController
+  ) { }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) 
-  {
-
-
-  // 桌号:
-    this.text = navParams.get('item');
-
-  // 输入的姓名  
-    this.form = new FormControl("name", Validators.required);
-  //   this.form = new FormGroup({
-  //     name: new FormControl("", Validators.required),
-      
-  //   });
-  }
-
-  ionViewDidLoad() {
-
-      //  alert(this.form.value.name);   
-    }
-  //注册
-  register(){
-
-    this.navCtrl.push(RegisterPage);
-
-  }
-  //打卡
-  click(){
-
-  alert(this.text + '去打卡');
-
+  openMenu() {
+    let actionSheet = this.actionsheetCtrl.create({
+      cssClass: 'page-scan',
+      buttons: [
+        {
+          text: '签到',
+          icon: !this.platform.is('ios') ? 'share' : null,
+          handler: () => {
+            console.log('您已签到！');
+          }
+        },
+        {
+          text: '签退',
+          icon: !this.platform.is('ios') ? 'arrow-dropright-circle' : null,
+          handler: () => {
+            console.log('您已签退');
+          }
+        },
+        {
+          text: '取消',
+          role: 'cancel', // will always sort to be on the bottom
+          icon: !this.platform.is('ios') ? 'close' : null,
+          handler: () => {
+            console.log('您已取消');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 }
+

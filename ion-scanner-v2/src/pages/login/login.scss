@@ -1,3 +1,61 @@
-page-login {
-
+.page-login {
+	ion-img{
+		background:#fff;
+	}
+	.logo{
+		position:relative;
+		top:50%;
+		left:50%;
+		margin:0px 0px 10px -90px;
+	}
+	.list-ios > .item-block:first-child,.list-ios .item-block .item-inner,.list-ios > .item-block:last-child{
+		border:0;
+	}
+	.list-ios{
+		margin:40px 0 24px 0;
+	}
+	.item-block{
+		min-height:0;
+		.item-inner{
+			min-height:0;
+			height:30px;
+			line-height:30px;
+		}	
+	} 
+	ion-input{
+		height: 30px;
+	    line-height: 30px;
+	    font-size: 12px;
+	}
+	.item-ios{
+		background-color:#faf9f9;
+		border-radius:5px;
+		margin-top:12px;
+		font-family:"微软雅黑";
+		color:#9b9b9b;
+	}
+	.item .text-input-ios{
+		margin:0;
+	}
+	.loginBtn{
+	    background:url(../assets/img/loginButton.png) no-repeat;
+	    background-size:contain;
+    }
+	.downBtn{
+	    font-family: "微软雅黑";
+	    color: #9b9b9b;
+	    position: absolute;
+	    bottom: 24px;
+	    height: 20px;
+	    line-height: 20px;
+	    width: 90%;
+	    left: 5%;
+	    font-size:10px;
+		.forgetPwd{
+			float:left;
+		}
+		.register{
+			float:right;
+		}
+	}
 }
