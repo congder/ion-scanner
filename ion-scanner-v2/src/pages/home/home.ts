@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {BarcodeScanner} from 'ionic-native';
 import { NavController } from 'ionic-angular';
 import {ScanPage} from '../scan/scan';
+
 import {RegisterPage} from '../register/register';
 @Component({
   selector: 'page-home',
