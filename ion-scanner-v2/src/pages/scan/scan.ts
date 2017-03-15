@@ -13,7 +13,9 @@ export class ScanPage {
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,
     public navCtrl : NavController
-  ) { }
+  ) { 
+  
+  }
 
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
