@@ -73,8 +73,8 @@ date: string = new Date().toISOString();
   }
 
   record(){
-  // this.navCtrl.push(ConfirmPage);
-alert(this.date)
+  this.navCtrl.push(ConfirmPage);
+// alert(this.date)
 
 
   }
