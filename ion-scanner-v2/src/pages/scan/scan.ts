@@ -12,6 +12,7 @@ export class ScanPage {
 
 date: string = new Date().toISOString();
 
+
   
 
   constructor(
@@ -72,13 +73,10 @@ date: string = new Date().toISOString();
   record(){
   // this.navCtrl.push(ConfirmPage);
 alert(this.date)
+
+
   }
-// .then(function (event) {
 
-//        event;
-//        this.navCtrl.push(HomePage);
-
-//     })
 
 
 }
