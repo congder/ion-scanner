@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import {BarcodeScanner} from 'ionic-native';
 import { NavController } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
-import {ConfirmPage} from '../confirm/confirm';
-
+import { ConfirmPage} from '../confirm/confirm';
+import { HomePage } from '../home/home';
 @Component({
   templateUrl: 'scan.html',
   selector:'page-scan'
@@ -49,22 +49,32 @@ export class ScanPage {
   scan(){
     BarcodeScanner.scan().then((result) => {
       if (!result.cancelled) {
+            
+       alert("result.text" + result.text);
 
-        this.navCtrl.push(ConfirmPage,{item:result.text});
+        this.navCtrl.push(ConfirmPage);
 
-        // alert("text:then 1" + result.text);
-        // alert("format: " + result.format);
       }
 
-    }).then(function (event) {
-
-      //  alert("text:" + 'xxxxxx');
-
-       event;
     })
     .catch((err) => {
       alert('err: ' + err);
+      //失败 跳转 home
+      this.navCtrl.push(HomePage);
     })
   }
+
+  record(){
+  this.navCtrl.push(ConfirmPage);
+
+  }
+// .then(function (event) {
+
+//        event;
+//        this.navCtrl.push(HomePage);
+
+//     })
+
+
 }
 

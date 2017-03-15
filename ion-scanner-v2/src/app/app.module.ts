@@ -2,20 +2,23 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-
+// 注意,此处路径是带 pages
 import { HomePage } from '../pages/home/home';
 import { ScanPage } from '../pages/scan/scan';
 import { RegisterPage } from '../pages/register/register';
 import { HttpClient } from '../utils/HttpClient';
 import { LoginPage } from '../pages/login/login';
-import {ConfirmPage} from '../confirm/confirm';
+import { ConfirmPage} from '../pages/confirm/confirm';
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ScanPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    ConfirmPage
+    
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +29,8 @@ import {ConfirmPage} from '../confirm/confirm';
     HomePage,
     ScanPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+    ConfirmPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},HttpClient]
 })

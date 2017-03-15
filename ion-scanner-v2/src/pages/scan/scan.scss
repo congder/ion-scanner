@@ -49,5 +49,9 @@
 	.record{
 		float:right;
 		margin:0 20px 18px 0;
+		// background-size:contain;
+		background:url(../assets/img/record.png) no-repeat;
+	   width: 54px ;
+	   height: 28px;
 	}
 }
