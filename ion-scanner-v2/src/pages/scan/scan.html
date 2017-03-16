@@ -14,11 +14,13 @@
 		<span class="menu"><ion-icon name="menu"></ion-icon></span>
 	</div>
 	<div class="timeBox">
-		<p class="time">18:30</p>
-		<p class="date">星期六 2017 .06.18</p>
+		<p class="time">{{time}}</p>
+		<p class="date">{{week}} {{date}}</p>
 	</div>
 
 	<button class="camera" ion-button  (click)="scan()"></button>
 	
 	<button class="record" ion-button  (click)="record()"></button>
+
+
 </ion-content>
