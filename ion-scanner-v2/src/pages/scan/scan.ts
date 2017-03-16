@@ -42,9 +42,8 @@ ionViewDidLoad() {
             break;
           default :break;
 
-         
     }
-     alert(this.date +  this.time);
+    //  alert(this.date +  this.time);
   }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({

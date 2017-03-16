@@ -9,6 +9,8 @@ import { RegisterPage } from '../pages/register/register';
 import { HttpClient } from '../utils/HttpClient';
 import { LoginPage } from '../pages/login/login';
 import { ConfirmPage} from '../pages/confirm/confirm';
+import { IdentifyingCodePage} from '../pages/identifying-code/identifying-code';
+import { ResetPwdPage} from '../pages/reset-pwd/reset-pwd';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,9 @@ import { ConfirmPage} from '../pages/confirm/confirm';
     ScanPage,
     RegisterPage,
     LoginPage,
-    ConfirmPage
-    
+    ConfirmPage,
+    IdentifyingCodePage,
+    ResetPwdPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +33,9 @@ import { ConfirmPage} from '../pages/confirm/confirm';
     ScanPage,
     RegisterPage,
     LoginPage,
-    ConfirmPage
+    ConfirmPage,
+    IdentifyingCodePage,
+    ResetPwdPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},HttpClient]
 })

@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content class="page-login">
+    <!--<form (submit)="loginClick()" [formGroup]="form">-->
     <div padding>
       <ion-img class="logo" width="180" height="220" src="assets/img/login.png"></ion-img>
       <ion-list>
@@ -15,16 +16,20 @@
           <ion-input  type="text" placeholder="姓名/手机号"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="密码"></ion-input>
+          <ion-input  type="password" placeholder="密码"></ion-input>
         </ion-item>
       </ion-list>
        <button class="loginBtn" ion-button block type="submit" (click)="loginClick()"></button>
-	
+
 
 	
        <div class="downBtn">
+         <!--<button ion-button class="register" (click)="loginClick()">注册 </button>
+        <button ion-button class="forgetPwd" (click)="forgetPwd()">忘记密码? </button>-->
+
          <span class="forgetPwd">忘记密码?</span>
          <span class="register">注册</span>
        </div>
     </div>
+    	 <!--</form>-->
 </ion-content>

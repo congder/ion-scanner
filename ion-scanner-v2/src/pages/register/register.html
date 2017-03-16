@@ -7,6 +7,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="page-register">
+   <!--<form (submit)="registerClick()" [formGroup]="form">-->
   <div padding>
       <ion-img class="logo" width="180" height="220" src="assets/img/login.png"></ion-img>
       <ion-list>
@@ -14,15 +15,17 @@
           <ion-input  type="text" placeholder="姓名/手机号"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" placeholder="用户名"></ion-input>
+          <ion-input  type="text" placeholder="用户名"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="密码"></ion-input>
+          <ion-input  type="password" placeholder="密码"></ion-input>
         </ion-item>
       </ion-list>
-       <button class="registerBtn" ion-button block type="submit" (click)="loginRegister()"></button>
+       <button class="registerBtn" ion-button block type="submit" (click)="registerClick()"></button>
+       <!--<button ion-button class="hadAccout" (click)="loginClick()"> 已有账号登录 </button>-->
 
        <p class="hadAccout">已有账号登录</p>
 
     </div>
+   <!--</form>-->
 </ion-content>
