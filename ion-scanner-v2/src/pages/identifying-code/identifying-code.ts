@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ResetPwdPage} from '../reset-pwd/reset-pwd';
 
 /*
   Generated class for the IdentifyingCode page.
@@ -17,6 +18,10 @@ export class IdentifyingCodePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IdentifyingCodePage');
+  }
+
+  confirmClick(){
+  		this.navCtrl.push(ResetPwdPage);
   }
 
 }
