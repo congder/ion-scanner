@@ -11,7 +11,7 @@ import { HomePage } from '../home/home';
 export class ScanPage {
 
 date: string = new Date().toLocaleDateString();
-time: string = new Date().toLocaleTimeString();
+time: string = new Date().toTimeString();
 week: string = new Date().toDateString();
   
 
@@ -24,7 +24,7 @@ week: string = new Date().toDateString();
   }
 ionViewDidLoad() {
    this.week  = this.week.substr(0,3);
-   this.time = this.time.substr(6,5);
+   this.time = this.time.substr(0,5);
         switch(this.week){
           case 'Mon':  this.week = '星期一';
            break;    
@@ -41,7 +41,10 @@ ionViewDidLoad() {
           case 'Sun':  this.week = '星期日';
             break;
           default :break;
+
+         
     }
+     alert(this.date +  this.time);
   }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
@@ -89,6 +92,7 @@ ionViewDidLoad() {
       alert('err: ' + err);
       //失败 跳转 home
       this.navCtrl.push(HomePage);
+      
     })
   }
 
