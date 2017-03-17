@@ -21,7 +21,7 @@
 	ion-list{
 		> div{
 			position:relative;
-			border-bottom:0.55px solid #c8c7cc;
+			border-bottom:0.55px solid #c8c7cc;	
 			.getCode{
 			    width: 74px;
 			    height: 22px;
@@ -56,7 +56,10 @@
 	    bottom: 2%;
 	    left: 6%;
 	}
-	.list-ios .item-block .item-inner{
-		border-bottom:0;
+	.list-ios > .item-block:first-child{
+		border-bottom:0.55px solid #c8c7cc;	
+	}
+	.list-ios .item-block .item-inner,.item-ios.item-block .item-inner{
+		border:0;
 	}
 }
