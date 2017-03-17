@@ -14,10 +14,27 @@ import { ResetPwdPage} from '../reset-pwd/reset-pwd';
 })
 export class IdentifyingCodePage {
 
+  currentTime = 60
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IdentifyingCodePage');
+  }
+
+  getCodeClick() {
+    this.countDown();
+  }
+
+  countDown() {
+    console.log("123");
+    this.currentTime -= 1;
+    if(this.currentTime == 0) {
+      clearTimeout(this.currentTime)
+    }else {
+      setTimeout(()=> {
+        this.countDown();
+      }, 1000);
+    }
   }
 
   confirmClick(){
