@@ -8,18 +8,18 @@
 </ion-header>
 
 <ion-content class="page-login">
-    <!--<form (submit)="loginClick()" [formGroup]="form">-->
+    <form  [formGroup]="loginForm">
     <div padding>
       <ion-img class="logo" width="180" height="220" src="assets/img/login.png"></ion-img>
       <ion-list>
         <ion-item>
-          <ion-input  type="text" placeholder="姓名/手机号"></ion-input>
+          <ion-input  type="text" formControlName="account" placeholder="姓名/手机号"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input  type="password" placeholder="密码"></ion-input>
+          <ion-input  type="password" formControlName="password" placeholder="密码"></ion-input>
         </ion-item>
       </ion-list>
-       <button class="loginBtn" ion-button block type="submit" (click)="loginClick()"></button>
+       <button class="loginBtn" ion-button block  (click)="loginClick(loginForm.value, $event)"></button>
 
 
 	
@@ -33,5 +33,5 @@
 
        </div>
     </div>
-    	 <!--</form>-->
+    	 </form>
 </ion-content>
