@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {BarcodeScanner} from 'ionic-native';
-import { NavController } from 'ionic-angular';
+import { NavController ,NavParams} from 'ionic-angular';
 import {ScanPage} from '../scan/scan';
 
 import {RegisterPage} from '../register/register';
@@ -15,17 +15,13 @@ export class HomePage {
 
   public text: String;
   public format: String;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+     this.ifSuccess = navParams.get('item');
   }
-  // 去注册
-  registerClick()
-  {
 
-   alert("前往注册!");
-  //  this.navCtrl.push(RegisterPage);
-  }
   // 去打卡按钮页
   backScan(){
+    alert(this.ifSuccess);
    this.navCtrl.popTo(ScanPage);
   }
 }

@@ -82,7 +82,7 @@ ionViewDidLoad() {
             
       //  alert("result.text" + result.text);
        //成功跳转到 Home ->comfirm
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push(HomePage,{item:'1'});
 
       }
 
@@ -90,7 +90,7 @@ ionViewDidLoad() {
     .catch((err) => {
       alert('err: ' + err);
       //失败 跳转 home
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(HomePage,{item:'0'});
       
     })
   }
