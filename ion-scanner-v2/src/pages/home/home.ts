@@ -18,7 +18,10 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
      this.ifSuccess = navParams.get('item');
   }
+    ionViewDidLoad() {
 
+      
+    }
   // 去打卡按钮页
   backScan(){
     alert(this.ifSuccess);

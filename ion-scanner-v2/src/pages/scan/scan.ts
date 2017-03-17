@@ -13,7 +13,7 @@ export class ScanPage {
 date: string = new Date().toLocaleDateString();
 time: string = new Date().toTimeString();
 week: string = new Date().toDateString();
-status:string; 
+status:string = '签到'; 
 
   constructor(
     public platform: Platform,

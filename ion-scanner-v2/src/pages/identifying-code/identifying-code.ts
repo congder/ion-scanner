@@ -14,7 +14,7 @@ import { ResetPwdPage} from '../reset-pwd/reset-pwd';
 })
 export class IdentifyingCodePage {
 
-  currentTime = 60
+  currentTime = 60;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
@@ -22,11 +22,15 @@ export class IdentifyingCodePage {
   }
 
   getCodeClick() {
+    // this.currentTime = '60';
     this.countDown();
+
+    
   }
 
   countDown() {
     console.log("123");
+    
     this.currentTime -= 1;
     if(this.currentTime == 0) {
       clearTimeout(this.currentTime)
