@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
-import {Observable} from "rxjs";
+// import {Observable} from "rxjs";
 import { Platform } from 'ionic-angular';
 import { HTTP } from 'ionic-native'
 /*

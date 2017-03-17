@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {LoginPage} from '../login/login';
+// import {LoginPage} from '../login/login';
 /*
   Generated class for the ResetPwd page.
 
