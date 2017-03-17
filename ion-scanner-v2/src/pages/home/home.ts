@@ -22,16 +22,16 @@ export class HomePage {
 // 更换显示图片
 
 // 3S后跳转
-      setInterval(()=> {
+      setTimeout(()=> {
         this.backScan();
-      }, 3);
+      }, 3000);
 
 
     }
 
   // 去打卡按钮页
   backScan(){
-    alert(this.ifSuccess);
+    // alert(this.ifSuccess);
    this.navCtrl.popTo(ScanPage);
   }
 }
