@@ -38,7 +38,7 @@ export class LoginPage {
             alert('请输入姓名!');
             return;
           }
-          if(this.loginForm.value.account.length<0){
+          if(this.loginForm.value.password.length<0){
             alert('请输入密码!');
             return;
           }
@@ -57,6 +57,7 @@ export class LoginPage {
         }).catch(err => {  
             // alert(err)  
         })  
+        alert(this.loginForm.value.account+'   '+ this.loginForm.value.password); 
         this.navCtrl.push(ScanPage);
     }
     registerClick(){
