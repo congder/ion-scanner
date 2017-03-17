@@ -20,6 +20,8 @@ export class ResetPwdPage {
   }
 loginClick()
 {
-this.navCtrl.popTo(LoginPage);
+  //  this.navCtrl.popToRoot; ?  为什么回不到根控制器
+   this.navCtrl.popTo( this.navCtrl.getByIndex(0));
+
 }
 }
