@@ -23,6 +23,7 @@ status:string = '签到';
   
   }
 ionViewDidLoad() {
+  console.log('1111111 ionViewDidLoad');
    this.week  = this.week.substr(0,3);
    this.time = this.time.substr(0,5);
         switch(this.week){
@@ -43,8 +44,16 @@ ionViewDidLoad() {
           default :break;
 
     }
-    //  alert(this.date +  this.time);
-    // this.navCtrl.setBackButtonText()
+   setTimeout(()=> {
+     // 每隔20秒  刷新时间
+        this.updateTime();
+      }, 20000);
+  }
+  updateTime(){
+    console.log('000000 更新');
+      this.time = (new Date().toTimeString()).substr(0,5);
+      // 改变时间后,刷新界面
+      this.ionViewDidLoad();
   }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
