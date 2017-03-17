@@ -64,8 +64,8 @@ registerClick(){
         }
 
         loginClick(){
-      // this.navCtrl.push(LoginPage);
-      alert('去登录页');
+            this.navCtrl.pop;
+      // alert('去登录页');
         }
 
 

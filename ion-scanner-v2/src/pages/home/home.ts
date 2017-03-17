@@ -23,6 +23,6 @@ export class HomePage {
   }
   // 去打卡按钮页
   backScan(){
-   alert('去打卡按钮页');
+   this.navCtrl.popTo(ScanPage);
   }
 }

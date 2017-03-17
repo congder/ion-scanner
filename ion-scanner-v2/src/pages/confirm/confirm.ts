@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { ScanPage } from '../scan/scan';
 /*
   Generated class for the Confirm page.
 
@@ -42,6 +42,7 @@ ionViewDidLoad() {
   }
 completeClick(){
 
-  alert('回到打卡按钮页');
+  // alert('回到打卡按钮页');
+this.navCtrl.popTo(ScanPage);
 }
 }

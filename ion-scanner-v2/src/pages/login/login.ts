@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '../../utils/HttpClient'
 import { NavController,NavParams } from 'ionic-angular';
-
+import { ScanPage } from '../scan/scan';
 import { RegisterPage } from '../register/register';
 import { IdentifyingCodePage } from '../identifying-code/identifying-code';
 
@@ -49,7 +49,11 @@ export class LoginPage {
         // }).catch(err => {  
         //     // alert(err)  
         // })  
-        this.navCtrl.push(RegisterPage);
+        this.navCtrl.push(ScanPage);
+    }
+    registerClick(){
+         this.navCtrl.push(RegisterPage);
+
     }
     forgetClick(){
         this.navCtrl.push(IdentifyingCodePage);

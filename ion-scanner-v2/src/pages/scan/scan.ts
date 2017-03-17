@@ -80,8 +80,8 @@ ionViewDidLoad() {
     BarcodeScanner.scan().then((result) => {
       if (!result.cancelled) {
             
-       alert("result.text" + result.text);
-
+      //  alert("result.text" + result.text);
+       //成功跳转到 Home ->comfirm
         this.navCtrl.push(ConfirmPage);
 
       }
