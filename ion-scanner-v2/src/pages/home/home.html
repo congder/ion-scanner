@@ -1,15 +1,12 @@
 
 <ion-header>
-  <ion-navbar>
-    <ion-title>扫码打卡</ion-title>
-  </ion-navbar>
+  <!--<ion-navbar>
+    <ion-title>扫码失败</ion-title>wrong
+  </ion-navbar>-->
 </ion-header>
-<ion-content padding>
-  <h2>Welcome to Ionic!
-
-    <button ion-button (click)="registerClick()"> 注册 </button>
-  </h2>
+<ion-content padding class = "page-home">
+ <ion-img class="failure" width="153" height="212" src="assets/img/wrong.png"></ion-img>
   
-  <button ion-button (click)="scan()"> 扫描二维码 </button>
+  <button class="backBtn" ion-button (click)="backScan()"> 返回 </button>
  
 </ion-content>

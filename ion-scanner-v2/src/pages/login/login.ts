@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '../../utils/HttpClient'
 import { NavController,NavParams } from 'ionic-angular';
+
 import { RegisterPage } from '../register/register';
 import { IdentifyingCodePage } from '../identifying-code/identifying-code';
+
 
 // import {
 //   FormGroup,
@@ -52,8 +54,5 @@ export class LoginPage {
     forgetClick(){
         this.navCtrl.push(IdentifyingCodePage);
     }
-    // forgetPwd(){
-    //  alert('forgetPwd'); 
-
-    // }
+   
 }

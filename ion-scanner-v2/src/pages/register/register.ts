@@ -63,10 +63,10 @@ registerClick(){
       
         }
 
-      //   loginClick(){
+        loginClick(){
       // this.navCtrl.push(LoginPage);
-      // // this.navCtrl.popTo;
-      //   }
+      alert('去登录页');
+        }
 
 
 

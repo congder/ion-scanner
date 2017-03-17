@@ -34,7 +34,7 @@ ionViewDidLoad() {
             break;
           case 'Thu':  this.week = '星期四';
             break;
-          case 'Fir':  this.week = '星期五';
+          case 'Fri':  this.week = '星期五';
             break;
           case 'Sat':  this.week = '星期六';
             break;
@@ -44,6 +44,7 @@ ionViewDidLoad() {
 
     }
     //  alert(this.date +  this.time);
+    // this.navCtrl.setBackButtonText()
   }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
