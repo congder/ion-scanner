@@ -64,7 +64,7 @@ registerClick(){
         }
 
         loginClick(){
-            this.navCtrl.pop;
+            this.navCtrl.popTo(LoginPage);
       // alert('去登录页');
         }
 

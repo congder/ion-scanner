@@ -10,6 +10,9 @@ import {RegisterPage} from '../register/register';
 })
 
 export class HomePage {
+
+  ifSuccess:number;
+
   public text: String;
   public format: String;
   constructor(public navCtrl: NavController) {

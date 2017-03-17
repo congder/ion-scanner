@@ -82,7 +82,7 @@ ionViewDidLoad() {
             
       //  alert("result.text" + result.text);
        //成功跳转到 Home ->comfirm
-        this.navCtrl.push(ConfirmPage);
+        this.navCtrl.push(HomePage);
 
       }
 
