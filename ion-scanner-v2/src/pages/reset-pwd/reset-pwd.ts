@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import {LoginPage} from '../login/login';
 /*
   Generated class for the ResetPwd page.
 
@@ -18,5 +18,8 @@ export class ResetPwdPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResetPwdPage');
   }
-
+loginClick()
+{
+this.navCtrl.popTo(LoginPage);
+}
 }
