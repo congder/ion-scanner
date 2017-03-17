@@ -1,11 +1,20 @@
 .page-home {
- .failure{
-
-		margin:220px auto 0;
+ 	.failure{
+ 		display:block;
+		margin:120px auto 0;
 		text-align:center;
- }
- .backBtn{
-
-
- }
+ 	}
+ 	ion-img{
+ 		background:#fff;
+ 	}
+	.backBtn{
+		background: url(../assets/img/backButton.png) no-repeat 0 0;
+	    background-size: contain;
+	    width: 88%;
+	    position: absolute;
+	    bottom: 0;
+	    left: 6%;
+	    margin: 0;
+	    padding: 0;
+	}
 }
