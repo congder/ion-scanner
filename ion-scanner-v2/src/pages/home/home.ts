@@ -34,4 +34,9 @@ export class HomePage {
     // alert(this.ifSuccess);
    this.navCtrl.popTo(ScanPage);
   }
+
+  changeImg(){
+    alert(1);
+    
+  }
 }
