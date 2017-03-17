@@ -11,7 +11,7 @@ import {ScanPage} from '../scan/scan';
 
 export class HomePage {
 
-  ifSuccess:number;
+  ifSuccess;
 
   public text: String;
   public format: String;
@@ -19,9 +19,16 @@ export class HomePage {
      this.ifSuccess = navParams.get('item');
   }
     ionViewDidLoad() {
+// 更换显示图片
 
-      
+// 3S后跳转
+      setInterval(()=> {
+        this.backScan();
+      }, 3);
+
+
     }
+
   // 去打卡按钮页
   backScan(){
     alert(this.ifSuccess);
