@@ -48,7 +48,6 @@ ionViewDidLoad() {
   }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
-     
       buttons: [
         {
           text: '签到',

@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '../../utils/HttpClient'
 import { NavController,NavParams } from 'ionic-angular';
-import {RegisterPage} from '../register/register';
-import { IdentifyingCodePage} from '../identifying-code/identifying-code';
+
+import { RegisterPage } from '../register/register';
+import { IdentifyingCodePage } from '../identifying-code/identifying-code';
+
+
 // import {
 //   FormGroup,
 //   FormControl,
@@ -22,7 +25,7 @@ export class LoginPage {
     //   password: new FormControl("", Validators.required)
     // });
   }
-loginClick(){
+    loginClick(){
           // if(this.form.value.account.length<0){
           //   alert('请输入姓名!');
           //   return;
@@ -47,11 +50,9 @@ loginClick(){
         //     // alert(err)  
         // })  
         this.navCtrl.push(RegisterPage);
-
     }
-    // 去验证码界面
-    forgetPwd(){
-    this.navCtrl.push(IdentifyingCodePage); 
-
+    forgetClick(){
+        this.navCtrl.push(IdentifyingCodePage);
     }
+   
 }

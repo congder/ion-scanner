@@ -5,14 +5,26 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>resetPwd</ion-title>
+    <button ion-button icon-only menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>设置登录密码</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content class="page-reset-pwd">
+	<ion-list>
+	    <ion-item>
+	    	<ion-label>密码</ion-label>
+	      	<ion-input  type="text" placeholder="请输入6~20位密码"></ion-input>
+	    </ion-item>
+	    <div>
+	    	<ion-item>
+		    	<ion-label>确认密码</ion-label>
+		      	<ion-input  type="password" placeholder="请再输入6~20位密码"></ion-input>
+		    </ion-item>
+	    </div>
+  	</ion-list>
+  	<button ion-button class="loginBtn" (click)="loginClick()"></button>
 </ion-content>

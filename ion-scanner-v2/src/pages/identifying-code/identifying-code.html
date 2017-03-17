@@ -5,14 +5,27 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>identifyingCode</ion-title>
+    <button ion-button icon-only menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>输入手机号</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content class="page-identifying-code">
+	<ion-list>
+	    <ion-item>
+	    	<ion-label>手机号</ion-label>
+	      	<ion-input  type="text" placeholder="请输入手机号"></ion-input>
+	    </ion-item>
+	    <div>
+	    	<ion-item>
+		    	<ion-label>验证码</ion-label>
+		      	<ion-input  type="password" placeholder="请输入验证码"></ion-input>
+		    </ion-item>
+	      	<button ion-button class="getCode" (click)="getCodeClick()">获取验证码</button>
+	    </div>
+  	</ion-list>
+  	<button ion-button class="confirmBtn" (click)="confirmClick()"></button>
 </ion-content>

@@ -1,3 +1,67 @@
-page-reset-pwd {
-
+.page-reset-pwd {
+	background:#fafafa;
+	.list-ios > .item-block:first-child,.list-ios .item-block .item-inner,.list-ios > .item-block:last-child{
+		
+	}
+	.list-ios{
+		margin:40px 0 24px 0;
+	}
+	ion-input{
+		height: 30px;
+	    line-height: 30px;
+	    font-size: 12px;
+	}
+	.item-ios{
+		font-family:"微软雅黑";
+		color:#9b9b9b;
+	}
+	.item .text-input-ios{
+		margin:0;
+	}
+	ion-list{
+		> div{
+			position:relative;
+			border-top:0.55px solid #c8c7cc;
+			border-bottom:0.55px solid #c8c7cc;
+			.getCode{
+			    width: 74px;
+			    height: 22px;
+			    border: 1px solid #9012fe;
+			    border-radius: 4px;
+			    color: #9012fe;
+			    padding: 2px;
+			    box-sizing: border-box;
+			    text-align: center;
+			    position:absolute;
+			    right:10px;
+			    top:12px;
+			    z-index:10;
+			    background:#fff;
+			    font-size:12px;
+			    font-family:"微软雅黑";
+			}
+		}
+		ion-item{
+			ion-label{
+				color:#4a4a4a;
+				font-size:12px;
+			}
+			ion-input{
+				background: url(../assets/img/blank.png) no-repeat center right;
+				background-size: 50px;
+			}
+		}
+	}	
+	.loginBtn{
+	    background: url(../assets/img/loginButton.png) no-repeat;
+	    background-size: contain;
+	    width: 88%;
+	    margin: 0 auto;
+	    position: absolute;
+	    bottom: 2%;
+	    left: 6%;
+	}
+	.list-ios .item-block .item-inner{
+		border-bottom:0;
+	}
 }
