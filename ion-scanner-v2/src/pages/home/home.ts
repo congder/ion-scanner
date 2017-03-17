@@ -18,30 +18,11 @@ export class HomePage {
   registerClick()
   {
 
-  //  alert("前往注册!");
-   this.navCtrl.push(RegisterPage);
+   alert("前往注册!");
+  //  this.navCtrl.push(RegisterPage);
   }
-  // 去扫码
-  scan(){
-    BarcodeScanner.scan().then((result) => {
-      if (!result.cancelled) {
-
-        this.navCtrl.push(ScanPage,{item:result.text});
-
-        // alert("text:then 1" + result.text);
-        // alert("format: " + result.format);
-      }
-
-    }).then(function (event) {
-
-      //  alert("text:" + 'xxxxxx');
-
-       event;
-    })
-    .catch((err) => {
-      alert('err: ' + err);
-    
-                
-    })
+  // 去打卡按钮页
+  backScan(){
+   alert('去打卡按钮页');
   }
 }

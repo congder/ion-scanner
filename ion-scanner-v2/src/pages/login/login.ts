@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '../../utils/HttpClient'
 import { NavController,NavParams } from 'ionic-angular';
 import {RegisterPage} from '../register/register';
+import { IdentifyingCodePage} from '../identifying-code/identifying-code';
 // import {
 //   FormGroup,
 //   FormControl,
@@ -48,8 +49,9 @@ loginClick(){
         this.navCtrl.push(RegisterPage);
 
     }
-    // forgetPwd(){
-    //  alert('forgetPwd'); 
+    // 去验证码界面
+    forgetPwd(){
+    this.navCtrl.push(IdentifyingCodePage); 
 
-    // }
+    }
 }
