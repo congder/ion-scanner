@@ -75,8 +75,8 @@ ionViewDidLoad() {
       if (!result.cancelled) {
             
       //  alert("result.text" + result.text);
-       //成功跳转到 Home ->comfirm
-        this.navCtrl.push(HomePage,{item:'1'});
+       //成功跳转到 Home ->comfirm  随后需要改
+        this.navCtrl.push(ConfirmPage);
 
       }
 
