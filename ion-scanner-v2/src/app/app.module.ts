@@ -24,7 +24,10 @@ import { ResetPwdPage} from '../pages/reset-pwd/reset-pwd';
     ResetPwdPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+    backButtonText: '返回'
+    })
+        
   ],
   bootstrap: [IonicApp],
   entryComponents: [
