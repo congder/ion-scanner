@@ -26,7 +26,7 @@ timer;
         // 去打卡按钮页
         this.navCtrl.popTo(ScanPage);
 
-      }, 10000);
+      }, 3000);
 
 
     }
