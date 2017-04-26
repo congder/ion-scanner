@@ -10,7 +10,7 @@ import {ScanPage} from '../scan/scan';
 })
 
 export class HomePage {
-
+timer;
   ifSuccess;
 
   public text: String;
@@ -19,21 +19,20 @@ export class HomePage {
      this.ifSuccess = navParams.get('item');
   }
     ionViewDidLoad() {
-// 更换显示图片
+   this.timer = setInterval(()=> {
+     // 每隔10秒  刷新时间
+    //  console.log('000000 更新');
+       this.timer = (new Date().toTimeString()).substr(0,5);
+        // 去打卡按钮页
+        this.navCtrl.popTo(ScanPage);
 
-// 3S后跳转
-      setTimeout(()=> {
-        this.backScan();
-      }, 3000);
+      }, 10000);
 
 
     }
-
-  // 去打卡按钮页
-  backScan(){
-    // alert(this.ifSuccess);
-   this.navCtrl.popTo(ScanPage);
-  }
+ ionViewWillLeave(){
+			clearInterval(this.timer);
+    }
 
   changeImg(){
     alert(1);

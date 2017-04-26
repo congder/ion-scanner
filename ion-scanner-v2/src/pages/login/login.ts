@@ -34,14 +34,7 @@ export class LoginPage {
 // });
   }
     loginClick(){
-          if(this.loginForm.value.account.length<0){
-            alert('请输入姓名!');
-            return;
-          }
-          if(this.loginForm.value.password.length<0){
-            alert('请输入密码!');
-            return;
-          }
+   
         var data = {
 
           account : this.loginForm.value.account,
@@ -53,11 +46,11 @@ export class LoginPage {
 
         this.httpDelegate.getDataFromUrl<any>(url, data, {}).then(any => {  
             // console.log(model.id) 
-            alert('success'); 
+            // alert('success'); 
         }).catch(err => {  
             // alert(err)  
         })  
-        alert(this.loginForm.value.account+'   '+ this.loginForm.value.password); 
+        // alert(this.loginForm.value.account+'显示输入的账号密码   '+ this.loginForm.value.password); 
         this.navCtrl.push(ScanPage);
     }
     registerClick(){
